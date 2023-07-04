@@ -1,0 +1,25 @@
+﻿@page
+@model XMLParser.Pages.IndexModel
+
+@{
+    ViewData["Title"] = "XML Parser";
+}
+
+<h1>XML Parser</h1>
+
+@if (Model.ItemsProperties != null && Model.ItemsProperties.Any())
+{
+    <div class="card-deck">
+        @foreach (var item in Model.ItemsProperties)
+        {
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">@item.Title</h5>
+                    <p class="card-text">@Html.Raw(item.Description)</p>
+                    <p class="card-text"><small class="text-muted">@item.PubDate</small></p>
+                    <a href="@item.Link" target="_blank" class="btn btn-primary">Link</a>
+                </div>
+            </div>
+        }
+    </div>
+}

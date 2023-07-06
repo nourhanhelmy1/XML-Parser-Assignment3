@@ -4,7 +4,7 @@ This is a simple XML parsing project that fetches an XML file from a specified U
 
 ## Requirements
 
-- .NET Core 6.0 or later
+- .NET 6.0 or later
 
 ## Getting Started
 
